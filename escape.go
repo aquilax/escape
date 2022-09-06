@@ -1,6 +1,7 @@
 package escape
 
 type Escaper interface {
+	Name() string
 	Escape(text string) (string, error)
 	UnEscape(text string) (string, error)
 }

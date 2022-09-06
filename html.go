@@ -4,6 +4,10 @@ import "html"
 
 type HTML struct{}
 
+func (h HTML) Name() string {
+	return "html"
+}
+
 func (h HTML) Escape(text string) (string, error) {
 	return html.EscapeString(text), nil
 }
