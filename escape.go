@@ -13,3 +13,11 @@ func Escape(text string, escaper Escaper) (string, error) {
 func UnEscape(text string, escaper Escaper) (string, error) {
 	return escaper.UnEscape(text)
 }
+
+func AllEscapers() []Escaper {
+	return []Escaper{
+		HTML{},
+		YAML{},
+		JSON{},
+	}
+}
